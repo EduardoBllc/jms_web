@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
-import {NavMenuHeaderComponent} from './nav-menu-header/nav-menu-header.component';
-import {NavMenuPageComponent} from './nav-menu-page/nav-menu-page.component';
+import {MenuHeaderComponent} from './menu-header/menu-header.component';
+import {MenuPageComponent} from './menu-page/menu-page.component';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
   imports: [
-    NavMenuHeaderComponent,
-    NavMenuPageComponent
+    MenuHeaderComponent,
+    MenuPageComponent,
+    NgForOf
   ],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
-
+  menuPages = [
+    { name: 'Início', icon: 'home' },
+    { name: 'Estoque', icon: 'diamond' },
+    { name: 'Clientes', icon: 'person' },
+    { name: 'Configurações', icon: 'settings' }
+  ];
 }

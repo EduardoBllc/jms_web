@@ -1,7 +1,9 @@
 <div id="nav-menu">
-  <app-nav-menu-header></app-nav-menu-header>
-  <div style="margin-top: 15px" class="nav-menu-divider"></div>
-  <app-nav-menu-page></app-nav-menu-page>
-  <div class="nav-menu-divider"></div>
-  <app-nav-menu-page></app-nav-menu-page>
+  <app-menu-header></app-menu-header>
+  <div id="menu-divider"></div>
+  <app-menu-page
+    *ngFor="let item of menuPages"
+  [itemName]="item.name"
+  [icon]="item.icon">
+  </app-menu-page>
 </div>
