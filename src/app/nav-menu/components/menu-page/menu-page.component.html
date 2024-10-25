@@ -1,0 +1,7 @@
+<div>
+  <div [class.collapsed]="menuIsCollapsed" class="menu-page" (click)="accessPage()">
+    <mat-icon class="fs-5 material-symbols-outlined page-icon">{{icon}}</mat-icon>
+    <span [class.collapsed]="menuIsCollapsed" class="menu-page-name">{{itemName}}</span>
+  </div>
+  <div class="page-divider" style="margin: 10px 0"></div>
+</div>

@@ -1,0 +1,42 @@
+.menu-page {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  margin: 10px 15px;
+  cursor: pointer;
+  transition: width 0.5s ease; /* Transição suave para a largura do menu */
+  width: 200px; /* Largura padrão do menu */
+}
+
+.menu-page.collapsed {
+  width: 50px; /* Largura quando colapsado, só o ícone será visível */
+}
+
+.page-icon {
+  margin-left: 8px;
+  margin-right: 10px;
+  transition: margin-right 0.5s ease; /* Transição para o espaçamento */
+}
+
+.menu-page.collapsed .page-icon {
+  margin-right: 0; /* Remove o espaçamento quando o menu é colapsado */
+}
+
+.menu-page-name {
+  font-size: 14px;
+  max-width: 150px;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: max-width 0.5s ease, opacity 0.5s ease;
+}
+
+.menu-page-name.collapsed {
+  max-width: 0;
+  opacity: 0;
+}
+
+.page-divider {
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+}

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {MenuHeaderComponent} from './menu-header/menu-header.component';
-import {MenuPageComponent} from './menu-page/menu-page.component';
+import {MenuPageComponent} from './components/menu-page/menu-page.component';
 import {NgForOf} from '@angular/common';
+import {MenuPage} from './components/menu-page/menu-page';
 
 @Component({
   selector: 'app-nav-menu',
@@ -15,10 +16,17 @@ import {NgForOf} from '@angular/common';
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
+  username: string = 'Janete Maria Salvagni';
+  isCollapsed: boolean = true;
+
   menuPages = [
-    { name: 'Início', icon: 'home' },
-    { name: 'Estoque', icon: 'diamond' },
-    { name: 'Clientes', icon: 'person' },
-    { name: 'Configurações', icon: 'settings' }
+    new MenuPage('Início', 'home', '/'),
+    new MenuPage('Estoque', 'diamond', '/stock'),
+    new MenuPage('Clientes', 'person', '/customers'),
+    new MenuPage('Configurações', 'settings', '/settings'),
   ];
+
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

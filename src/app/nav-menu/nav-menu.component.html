@@ -1,9 +1,15 @@
-<div id="nav-menu">
-  <app-menu-header></app-menu-header>
+<div id="nav-menu" [class.collapsed]="isCollapsed">
+  <app-menu-header
+    [username]="username"
+    [menuIsCollapsed]="isCollapsed"
+    (toggle)="toggleMenu()">
+  </app-menu-header>
   <div id="menu-divider"></div>
   <app-menu-page
     *ngFor="let item of menuPages"
-  [itemName]="item.name"
-  [icon]="item.icon">
+  [itemName]="item.pageName"
+  [icon]="item.icon"
+  [route]="item.route"
+  [menuIsCollapsed]="isCollapsed">
   </app-menu-page>
 </div>

@@ -3,6 +3,11 @@
   height: 100vh;
   padding: 15px 0;
   background-color: #EBEBEB;
+  transition: width 0.5s ease;
+}
+
+#nav-menu.collapsed {
+  width: 70px;
 }
 
 #menu-divider {

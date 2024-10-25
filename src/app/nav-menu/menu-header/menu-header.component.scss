@@ -1,25 +1,65 @@
 #nav-menu-header {
   display: flex;
+  align-items: center;
+  transition: width 0.5s ease;
+}
+
+#nav-menu-header.collapsed {
+  width: 60px;
 }
 
 #profile-image {
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 12px;
   cursor: pointer;
+  transition: margin-right 0.5s ease;
+}
+
+#nav-menu-header.collapsed #profile-image {
+  margin-right: 0;
 }
 
 #profile-name {
+  display: inline-block;
+  max-width: 150px;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 16px;
   color: #6a6a6a;
   cursor: pointer;
+  transition: max-width 0.5s ease, opacity 0.5s ease;
 }
 
-#menu-switch-button {
+#profile-name.collapsed {
+  max-width: 0;
+  opacity: 0;
+}
+
+.collapse-menu-button {
   margin-left: auto;
   cursor: pointer;
   color: #868686;
   font-size: 24px;
   margin-right: 10px;
+}
+
+#open-menu-container {
+  display: flex;
+  margin-left: 20px;
+  color: #868686;
+  font-size: 24px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  max-height: 24px;
+  opacity: 1;
+  transition: max-height 0.2s ease 0.2s, opacity 0.3s ease 0.2s;
+}
+
+#open-menu-container.opened {
+  transition: max-height 0.2s ease 0s, opacity 0s ease 0s;
+  max-height: 0;
+  opacity: 0;
 }
