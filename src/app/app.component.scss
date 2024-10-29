@@ -1,0 +1,23 @@
+@import "../styles/variables";
+
+mat-toolbar {
+  position: relative;
+  z-index: 5;
+}
+
+.content {
+  padding: 24px;
+  background-color: #ededed;
+  transition: margin-left $animation-speed ease-in-out;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+  border-radius: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: all $animation-speed ease-in-out;
+}
+

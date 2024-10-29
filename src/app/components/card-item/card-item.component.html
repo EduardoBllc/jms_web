@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center align-items-end">
+  <span class="label me-2 pb-2">{{cardItem.label}}: </span>
+  <span *ngIf="!cardItem.monetary" class="text-large">
+    {{cardItem.value}}{{cardItem.sufix}}
+  </span>
+  <span *ngIf="cardItem.monetary" class="text-large">
+    {{cardItem.value | currency: 'BRL'}}
+  </span>
+</div>

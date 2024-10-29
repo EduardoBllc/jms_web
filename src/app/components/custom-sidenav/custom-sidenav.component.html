@@ -1,0 +1,16 @@
+<div class="sidenav-header">
+  <img [width]="profileImageSize()" [height]="profileImageSize()" src="assets/minha_ft_perfil.jpg" alt="foto perfil">
+  <div class="header-text" [class.hide-header-text]="sidenavCollapsed()">
+    <h2>Eduardo Ballico</h2>
+  </div>
+</div>
+<mat-nav-list>
+  <app-sidenav-item
+    *ngFor="let item of menuItems()"
+    [routerLink]="item.route"
+    [label]="item.label"
+    [icon]="item.icon"
+    [collapsed]="sidenavCollapsed()"
+  >
+  </app-sidenav-item>
+</mat-nav-list>

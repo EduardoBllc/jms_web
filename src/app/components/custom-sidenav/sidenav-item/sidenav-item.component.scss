@@ -1,0 +1,21 @@
+@import "../../../../styles/variables";
+
+.navbar-page-item {
+  transition: border-left-color $animation-speed ease-in-out;
+  border-radius: 0 !important;
+  //background-color: transparent !important;
+  border-left: 5px solid transparent;
+
+  * {
+    transition: all $animation-speed ease-in-out;
+  }
+
+  .hide-page-title {
+    font-size: 10px;
+    opacity: 0;
+  }
+}
+
+.selected-page-item {
+  border-left: 5px solid $primary-color !important;
+}

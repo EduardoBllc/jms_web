@@ -1,0 +1,49 @@
+<div class="container">
+  <!-- Header Card -->
+  <div class="card-header mb-3">
+    <span id="stock-totals-label" class="row mb-4 ps-3 fs-4">Totais Estoque:</span>
+    <div class="row justify-content-center text-center">
+      <app-card-item class="col-{{cardItem.size}}"
+        *ngFor="let cardItem of cardItems"
+        [cardItem]="cardItem"
+      ></app-card-item>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Left Content: Ultimas peças adquiridas e Peças mais antigas -->
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5>Ultimas peças adquiridas:</h5>
+        <ul class="list-group">
+          <app-product-list-item
+            *ngFor="let product of lastAquiredProducts"
+            [product]="product"
+          ></app-product-list-item>
+        </ul>
+      </div>
+
+      <div class="card-body mt-3">
+        <h5>Peças mais antigas:</h5>
+        <ul class="list-group">
+          <app-product-list-item
+            *ngFor="let product of olderProducts"
+            [product]="product"
+          ></app-product-list-item>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="actions">
+        <h6>Ações:</h6>
+        <app-actions-button
+          *ngFor="let action of actionsList"
+          [route]="action.route"
+          [icon]="action.icon"
+          [label]="action.label"
+        ></app-actions-button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.card-header, .card-body, .actions {
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.actions a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#stock-totals-label {
+  color: #858585;
+}
+
+.product-id {
+  color: grey;
+}

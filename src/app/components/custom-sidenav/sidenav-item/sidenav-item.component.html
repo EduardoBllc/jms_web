@@ -1,0 +1,14 @@
+<a
+  mat-list-item
+  routerLinkActive="selected-page-item"
+  #rla="routerLinkActive"
+  [activated]="rla.isActive"
+  class="navbar-page-item"
+>
+  <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>
+    {{ icon }}
+  </mat-icon>
+  <span matListItemTitle [class.hide-page-title]="sidenavCollapsed()">
+      {{ label }}
+    </span>
+</a>
